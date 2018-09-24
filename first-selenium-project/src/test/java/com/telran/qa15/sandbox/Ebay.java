@@ -14,29 +14,4 @@ import java.util.concurrent.TimeUnit;
 
 public class Ebay {
 
-  WebDriver wd;
-
-  @BeforeMethod
-
-
-public void setUp(){
-  wd=new ChromeDriver();
-  wd.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
-
-}
-  @Test
-  public void openSiteTest(){
-    wd.navigate().to("https://www.ebay.com/");
-
-    wd.findElement(By.linkText("Sing in")).click();
-    wd.findElement(By.name("userid")).sendKeys("hdhjfgefgeg");
-    wd.findElement(By.name("pass")).sendKeys("hdgaygwy");
-    wd.findElement(By.id("sgnBt")).click();
-  }
-  @AfterMethod
-  public void tearDown() throws InterruptedException {
-    Thread.sleep(2000);// чтобы страница браузера была открыта
-    //wd.quit();
-  }
-
 }
