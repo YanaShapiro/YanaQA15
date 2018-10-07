@@ -25,7 +25,10 @@ public class LoginWikipedia {
     wd.findElement(By.name("wpName")).sendKeys("gdyhgasga");
     wd.findElement(By.name("wpPassword")).sendKeys("dhghc");
     wd.findElement(By.name("wpRemember")).click();
-    wd.findElement(By.id("wpLoginAttemp")).click();
+    wd.findElement(By.className("mw-htmlform-field-HTMLSubmitField")).click();
+
+
+
 
   }
   @AfterMethod
